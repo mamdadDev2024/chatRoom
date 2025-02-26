@@ -5,7 +5,7 @@ namespace App\Livewire\Room;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
-class Craete extends Component
+class Create extends Component
 {
     #[Validate("required|min:6|string|unique:rooms")]
     public $title;
@@ -23,6 +23,6 @@ class Craete extends Component
     }
     public function render()
     {
-        return view('livewire.room.craete');
+        return view('livewire.room.create');
     }
 }
