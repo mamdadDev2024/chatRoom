@@ -1,6 +1,6 @@
 <form 
     wire:submit="register" 
-    class="w-full max-w-2xl mx-auto p-6 rounded-2xl shadow-lg bg-gradient-to-br from-purple-600 to-blue-600 hover:shadow-xl transition-shadow duration-300"
+    class="w-full max-w-2xl mt-28  mx-auto p-6 rounded-2xl shadow-lg bg-gradient-to-br from-purple-600 to-blue-600 hover:shadow-xl transition-shadow duration-300"
 >
     <div class="space-y-6 text-white">
         <!-- Email Input -->

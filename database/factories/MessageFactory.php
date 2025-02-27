@@ -16,8 +16,9 @@ class MessageFactory extends Factory
      */
     public function definition(): array
     {
+        $nm = rand(10 , 60);
         return [
-            "text" => fake()->paragraphs(4 , true),
+            "text" => fake()->paragraphs( $nm , true),
         ];
     }
 }

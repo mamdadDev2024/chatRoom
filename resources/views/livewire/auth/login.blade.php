@@ -1,6 +1,6 @@
 <form 
     wire:submit="login" 
-    class="w-full max-w-2xl mx-auto p-6 rounded-2xl shadow-lg bg-gradient-to-br from-blue-600 to-purple-600 hover:shadow-xl transition-shadow duration-300"
+    class="w-full max-w-2xl mt-28 mx-auto p-6 rounded-2xl shadow-lg bg-gradient-to-br from-blue-600 to-purple-600 hover:shadow-xl transition-shadow duration-300"
 >
     <div class="space-y-6 text-white">
         <!-- Email Input -->
@@ -42,14 +42,15 @@
             type="submit"
             class="w-full py-3 px-6 bg-white/90 hover:bg-white text-blue-900 font-semibold rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
         >
-            <span wire:loading.remove wire:target="submit">ورود به حساب</span>
-            <span wire:loading wire:target="submit" class="flex items-center gap-2">
+            <span wire:loading.remove wire:target="login">ورود به حساب</span>
+            <span wire:loading wire:target="login" class="flex items-center gap-2">
                 <span class="animate-spin">🌀</span>
                 در حال ورود...
             </span>
-            <svg wire:loading.class="opacity-0" wire:target="submit" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg wire:loading.class="opacity-0" wire:target="login" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
             </svg>
+
         </button>
 
 

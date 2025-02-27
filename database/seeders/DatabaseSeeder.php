@@ -21,17 +21,17 @@ class DatabaseSeeder extends Seeder
         ->count(10)
         ->has(
             Room::factory()
-                ->count(3)
+                ->count(rand(3 , 10))
                 ->has(
                     Like::factory()
-                        ->count(1)
+                        ->count(rand(60 , 500))
                         ->state(function (array $attributes, Room $room) {
                             return ['user_id' => $room->user_id];
                         })
                 )
                 ->has(
                     Message::factory()
-                        ->count(100)
+                        ->count(rand(132 , 62333))
                         ->state(function (array $attributes, Room $room) {
                             return ['user_id' => $room->user_id];
                         })

@@ -11,7 +11,7 @@ class Home extends Component
     
     public function render()
     {
-        $rooms = Room::with('user')
+        $rooms = Room::limit(40)->with('user')
                      ->withCount('likes', 'messages')
                      ->paginate(10);
     
