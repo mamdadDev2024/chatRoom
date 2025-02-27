@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     use HasFactory;
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
     protected $fillable = [
         "title",
         "user_id",

@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Auth;
 
+use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -18,6 +19,11 @@ class Login extends Component
     public function login()
     {
         $this->validate();
+        if(Auth::attempt($this->only(["email" , "password"]) , true))
+        {
+            $this->dispatch("authLogedin");
+            return $this->redirectRoute("home" , navigate:true);
+        }
         
     }
     public function render()
