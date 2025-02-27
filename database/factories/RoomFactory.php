@@ -21,7 +21,7 @@ class RoomFactory extends Factory
         return [
             "title" => $title,
             "desc" => fake()->paragraphs(5 , true),
-            "file_name" => fake()->imageUrl(),
+            "file_name" => fake()->image(),
             "slug" => Str::slug($title)
         ];
     }
