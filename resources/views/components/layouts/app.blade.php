@@ -50,12 +50,18 @@
     @livewireScripts
     
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', hideLoader);
+        document.addEventListener('turbo:load', hideLoader);
+        document.addEventListener('livewire:navigated', hideLoader);
+
+        function hideLoader() {
             const loader = document.getElementById('global-loader');
-            setTimeout(() => {
+            if (loader) {
                 loader.classList.add('opacity-0', 'pointer-events-none');
-            }, 500);
-        });
+                setTimeout(() => loader.remove(), 500); // حذف لودر بعد از انیمیشن
+            }
+        }ی
     </script>
+
 </body>
 </html>

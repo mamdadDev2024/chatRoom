@@ -12,9 +12,17 @@ class Single extends Component
     public Room $Room;
     public function subscribe()
     {
-        if (auth()->check()) {
-            Auth::user()->registeredRooms()->attach($this->room);            
+        if (Auth::check()) {
+            Auth::user()->registeredRooms()->attach($this->Room);            
+            $this->dispatch("notify" , [
+                "type" => "success",
+                "message" => "شما در گفتگو عضو شدید"
+            ]);
         }else {
+            $this->dispatch("notify" , [
+                "type" => "error",
+                "message" => "شما در گفتگو عضو نشدید"
+            ]);
             return $this->redirectRoute("login" ,navigate:true);
         }
     }

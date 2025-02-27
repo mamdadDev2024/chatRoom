@@ -8,7 +8,7 @@
     
     <!-- Content Section -->
     <div class="p-4 space-y-3">
-        <a href="{{ route('room.show', ['Room' => $Room->slug]) }}" class="text-xl font-semibold text-gray-800 hover:text-blue-500 transition">
+        <a wire:navigate href="{{ route('room.show', ['Room' => $Room->slug]) }}" class="text-xl font-semibold text-gray-800 hover:text-blue-500 transition">
             {{ $Room->title }}
         </a>
         <p class="text-gray-600 text-sm leading-relaxed line-clamp-3">
@@ -47,7 +47,7 @@
             <button wire:click="subscribe" class="w-1/2 text-center text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 transition py-2 rounded-lg">
                 عضویت
             </button>
-            <a href="{{ route('room.show', ['Room' => $Room->slug]) }}" class="w-1/2 text-center text-sm font-semibold text-blue-500 border border-blue-500 hover:bg-blue-100 transition py-2 rounded-lg">
+            <a wire:navigate href="{{ route('room.show', ['Room' => $Room->slug]) }}" class="w-1/2 text-center text-sm font-semibold text-blue-500 border border-blue-500 hover:bg-blue-100 transition py-2 rounded-lg">
                 بیشتر
             </a>
         </div>

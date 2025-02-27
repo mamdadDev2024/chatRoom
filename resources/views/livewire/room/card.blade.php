@@ -1,7 +1,7 @@
 @props(['room'])
 
 <!-- Enhanced Modern Room Card -->
-<div class="max-w-xs mx-auto bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 hover:border-gray-300 h-full flex flex-col">
+<div class="max-w-xs min-w-xs mx-auto bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 hover:border-gray-300 h-full flex flex-col">
     <!-- Image Section -->
     <div class="relative overflow-hidden">
         <img 
@@ -13,7 +13,7 @@
 
     <!-- Content Section -->
     <div class="p-5 flex flex-col flex-1">
-        <a href="{{ route('room.single', ['Room' => $room->slug]) }}" class="text-lg font-semibold text-gray-800 hover:text-blue-500 transition">
+        <a wire:navigate href="{{ route('room.single', ['Room' => $room->slug]) }}" class="text-lg font-semibold text-gray-800 hover:text-blue-500 transition">
             {{ $room->title }}
         </a>
 
@@ -50,7 +50,7 @@
             <button wire:click="subscribe" href="#" class="w-1/2 text-center text-sm font-semibold text-white bg-blue-500 hover:bg-blue-600 transition py-2 rounded-lg">
                 عضویت
             </button>
-            <a href="{{ route('room.single', ['Room' => $room->slug]) }}" class="w-1/2 text-center text-sm font-semibold text-blue-500 border border-blue-500 hover:bg-blue-100 transition py-2 rounded-lg">
+            <a wire:navigate href="{{ route('room.single', ['Room' => $room->slug]) }}" class="w-1/2 text-center text-sm font-semibold text-blue-500 border border-blue-500 hover:bg-blue-100 transition py-2 rounded-lg">
                 بیشتر
             </a>
         </div>
