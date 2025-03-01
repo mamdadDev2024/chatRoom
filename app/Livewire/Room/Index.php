@@ -3,9 +3,11 @@
 namespace App\Livewire\Room;
 
 use App\Models\Room;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithPagination;
 
+#[Title("لیست گفتگو ها")]
 class Index extends Component
 {
     use WithPagination;

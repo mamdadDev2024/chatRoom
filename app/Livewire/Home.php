@@ -2,9 +2,11 @@
 namespace App\Livewire;
 
 use App\Models\Room;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithPagination;
 
+#[Title("خانه")]
 class Home extends Component
 {
     use WithPagination;

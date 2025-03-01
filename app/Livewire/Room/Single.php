@@ -5,8 +5,9 @@ namespace App\Livewire\Room;
 use App\Models\Room;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Title;
 use Livewire\Component;
-
+#[Title("جزئیات گفتگو")]
 class Single extends Component
 {
     public Room $Room;

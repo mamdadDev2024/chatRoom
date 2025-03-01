@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html 
+    x-data="{ darkMode: false }" :class="{'dark': darkMode}"
     lang="{{ str_replace('_', '-', app()->getLocale()) }}" 
     dir="rtl"
     class="scroll-smooth"
@@ -23,7 +24,6 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <title>{{ $title . ' | ' . config('app.name') }}</title>
-    
     @stack('scripts')
 </head>
 
@@ -35,10 +35,7 @@
         </div>
     </div>
 
-    <!-- Header Section -->
-    <header>
-        <x-header/>
-    </header>
+    <x-header/>
 
     <!-- Main Content -->
     <main class="flex-1">

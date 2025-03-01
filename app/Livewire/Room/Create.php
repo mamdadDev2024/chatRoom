@@ -4,6 +4,7 @@ namespace App\Livewire\Room;
 
 use App\Models\Room;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;

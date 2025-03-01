@@ -11,11 +11,12 @@ const Toast = Swal.mixin({
       toast.onmouseenter = Swal.stopTimer;
       toast.onmouseleave = Swal.resumeTimer;
     }
-  });
+});
 
-window.Echo.channel("notify").listenToAll((e) => {
-    Toast.fire({
-        icon: e.detail.type,
-        title: e.detail.message
-      });
-})
+window.Echo.channel("notify")
+    .listenToAll((event) => {
+        Toast.fire({
+            icon: event.type,
+            title: event.message
+        });
+    });

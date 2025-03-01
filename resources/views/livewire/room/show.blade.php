@@ -1,9 +1,4 @@
-<div x-data="{ darkMode: $persist(false) }" class="flex bg-gray-100 dark:bg-gray-900 transition-colors duration-300 min-h-screen">
-    <!-- Theme Toggle -->
-    <button @click="darkMode = !darkMode" class="fixed top-4 right-4 z-50 p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg">
-        <span x-show="!darkMode">🌙</span>
-        <span x-show="darkMode" class="text-yellow-400">☀️</span>
-    </button>
+<div class="flex bg-gray-100 dark:bg-gray-900 transition-colors duration-300 min-h-screen">
 
     <!-- Sidebar -->
     <aside class="w-1/4 bg-white dark:bg-gray-800 shadow-md p-4 overflow-y-auto border-r border-gray-200 dark:border-gray-700">
@@ -51,7 +46,7 @@
                         </span>
                     </div>
 
-                    <p class="text-sm">{{ $message->content }}</p>
+                    <p class="text-sm">{{ $message->text }}</p>
                 </div>
             </div>
             @endforeach
